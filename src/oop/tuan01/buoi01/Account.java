@@ -1,4 +1,4 @@
-package oop;
+package oop.tuan01.buoi01;
 
 import java.util.Scanner;
 
@@ -26,8 +26,7 @@ public class Account {
     void withdraw() {
         // rút tiền
         System.out.print("Nhap vào so tien can rut: ");
-        int withdrawAmount = 0;
-        withdrawAmount = input.nextInt();
+        int withdrawAmount = input.nextInt();
         account_balance -= withdrawAmount;
     }
 }

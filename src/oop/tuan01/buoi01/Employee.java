@@ -1,9 +1,9 @@
-package oop;
+package oop.tuan01.buoi01;
 
 public class Employee {
     // data Employee
-    static String emName; // ten nhan vien
-    static double salary; // luong
+    String emName; // ten nhan vien
+    double salary; // luong
     // phương thức
     void getEmName(){
         emName = "Nguyen van a";

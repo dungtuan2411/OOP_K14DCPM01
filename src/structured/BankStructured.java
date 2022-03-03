@@ -5,22 +5,21 @@ import java.util.Scanner;
 public class BankStructured {
     // toan cuc: global
     // data
-    // khai bao 2 bien
     static int account_number = 12345;
     static int account_balance = 0;
     static Scanner input;
     // data Employee
-    static String emName;// ten nhan vien
-    static double salary;// luong
+    static String emName; // ten nhan vien
+    static double salary; // luong
     // data Customer
-    static String cusName;// ten khach
-    static String address;// dia chi
+    static String cusName; // ten khach
+    static String address; // dia chi
 
     public static void main(String[] args) {
         // hành động thao tác lên java
         input = new Scanner(System.in);
 
-        deposit(input);
+        deposit(); // make function call
         show();
 
         withdraw();
@@ -31,7 +30,15 @@ public class BankStructured {
         getCusInfo();
     }
 
-    static void deposit(Scanner input) {
+    // Account method
+    static void withdraw() {
+        // rút tiền
+        System.out.print("Nhap vào so tien can rut: ");
+        int withdrawAmount = input.nextInt();
+        account_balance -= withdrawAmount;
+    }
+
+    static void deposit() {
         // gửi tiền
         System.out.print("Nhap so tien can gui: ");
         int depositAmount = 0;
@@ -46,25 +53,20 @@ public class BankStructured {
         System.out.println("Account Balance: " + account_balance);
     }
 
-    static void withdraw() {
-        // rút tiền
-        System.out.print("Nhap vào so tien can rut: ");
-        int withdrawAmount = 0;
-        withdrawAmount = input.nextInt();
-        account_balance -= withdrawAmount;
-    }
-
-    static void getEmName(){
+    // Enployee method
+    static void getEmName() {
         emName = "";
-        cusName = "ABC";//ko duoc quyen dung cham den du lieu cua Cusomter
+        cusName = "ABC"; // ko duoc quyen dung cham den du lieu cua Cusomter
     }
 
-    static void getSalary(){
+    static void getSalary() {
         salary = 500;
     }
 
-    static String getCusInfo(){//Khach hang cusomter
-        account_balance = 0;// VO TINH HAY CO Y THAO TAC TEN DU LIEU MA DANG LE FUNCTION KHONG DUOC/NEN DUNG CHAM DEN CAI DATA DO
+    // Customer method
+    static String getCusInfo() { // Khach hang cusomter
+        account_balance = 0; // VO TINH HAY CO Y THAO TAC LEN DU LIEU MA DANG LE FUNCTION NAY KHONG DUOC/NEN
+                             // DUNG CHAM DEN CAI DATA DO
         return cusName + address;
     }
 }

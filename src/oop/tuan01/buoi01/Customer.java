@@ -1,9 +1,9 @@
-package oop;
+package oop.tuan01.buoi01;
 
 public class Customer {
     // thuộc tính
-    static String cusName;// ten khach
-    static String address;// dia chi
+    String cusName;// ten khach
+    String address;// dia chi
 
     // phương thức
     String getCusInfo(){
