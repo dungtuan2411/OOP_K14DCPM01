@@ -2,16 +2,15 @@ package oop.tuan01.buoi01;
 
 public class Customer {
     // thuộc tính
-    String cusName;// ten khach
-    String address;// dia chi
+    String address; // dia chi
+    String phone; // so dien thoai
 
     // phương thức
-    String getCusInfo(){
-        cusName = "nguyen van c";
-        address = "ca mau";
-        
-        System.out.println(cusName);
-        System.out.println(address);
-        return cusName + address;
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 }
