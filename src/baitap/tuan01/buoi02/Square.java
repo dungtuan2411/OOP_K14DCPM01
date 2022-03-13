@@ -11,7 +11,7 @@ public class Square {
 
     // method
     void rotate() {
-        System.out.println("Rotating 360 ...");
+        System.out.println("Square rotating 360 ...");
         // khi xoay sẽ phát nhạc
         this.playSound();
     }

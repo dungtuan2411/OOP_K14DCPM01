@@ -1,17 +1,17 @@
 package baitap.tuan01.buoi02;
 
 public class Circle {
-    // attribute
+    // attribute: mỗi hình có soundFile riêng
     String soundFile;
 
-    // constructor
+    // constructor: khởi tạo giá trị soundFile
     public Circle(String soundFile) {
         this.soundFile = soundFile;
     }
 
     // method
     void rotate() {
-        System.out.println("Rotating 360 ...");
+        System.out.println("Circle rotating 360 ...");
         // khi xoay sẽ phát nhạc
         this.playSound();
     }
