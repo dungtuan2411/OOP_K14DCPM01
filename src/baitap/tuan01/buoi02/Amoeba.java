@@ -7,8 +7,8 @@ public class Amoeba {
      * Sẽ xoay theo tọa độ điểm trục hoành Ox (nằm ngang)
      * và trục tung Oy (thẳng đứng) .
      */
-    String soundFile;
-    double xPoint, yPoint; // tọa độ điểm
+    private String soundFile;
+    private double xPoint, yPoint; // tọa độ điểm
     // constructor
 
     public Amoeba(String soundFile) {

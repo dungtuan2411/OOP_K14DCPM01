@@ -2,7 +2,7 @@ package baitap.tuan01.buoi02;
 
 public class Circle {
     // attribute: mỗi hình có soundFile riêng
-    String soundFile;
+    private String soundFile;
 
     // constructor: khởi tạo giá trị soundFile
     public Circle(String soundFile) {

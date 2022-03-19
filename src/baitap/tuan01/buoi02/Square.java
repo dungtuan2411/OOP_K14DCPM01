@@ -2,7 +2,7 @@ package baitap.tuan01.buoi02;
 
 public class Square {
     // attribute
-    String soundFile;
+    private String soundFile;
 
     // constructor
     public Square(String soundFile) {

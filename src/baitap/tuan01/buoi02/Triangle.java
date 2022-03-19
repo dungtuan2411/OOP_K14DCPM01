@@ -2,7 +2,7 @@ package baitap.tuan01.buoi02;
 
 public class Triangle {
     // attribute
-    String soundFile;
+    private String soundFile;
 
     // constructor
     public Triangle(String soundFile) {
