@@ -36,13 +36,13 @@ public class GuessGame {
             p2.guess();
             p3.guess();
             // lấy kết quả đoán của player - Giao tiếp
-            guessp1 = p1.number;
+            guessp1 = p1.getNumber(); // encapsulation
             System.out.println("Player one guessed " + guessp1);
 
-            guessp2 = p2.number;
+            guessp2 = p2.getNumber(); // encapsulation
             System.out.println("Player one guessed " + guessp2);
 
-            guessp3 = p3.number;
+            guessp3 = p3.getNumber(); // encapsulation
             System.out.println("Player one guessed " + guessp3);
             // kiểm tra guess của từng người có = targetNumber không
             if (guessp1 == targetNumber) {

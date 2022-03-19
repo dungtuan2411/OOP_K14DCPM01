@@ -3,7 +3,12 @@ package baitap.tuan02.guessgame;
 public class Player {
     // attribute
     // giá trị mà player này đoán
-    int number;
+    private int number; // implementation
+
+    // getter
+    public int getNumber() {
+        return number;
+    }
 
     // method
     void guess() {
