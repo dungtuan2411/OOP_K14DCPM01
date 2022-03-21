@@ -3,9 +3,9 @@ package baitap.tuan02.guessgame;
 public class GuessGame {
     // state là các tham chiếu đến class Player
     // object của GuessGame sẽ giao tiếp với object của Player
-    Player p1;
-    Player p2;
-    Player p3;
+    private Player p1;
+    private Player p2;
+    private Player p3;
 
     // method
     public void startGame() {

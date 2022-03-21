@@ -11,7 +11,7 @@ public class Player {
     }
 
     // method
-    void guess() {
+    public void guess() {
         // phương thức thực hiện việc đoán
         this.number = (int) (Math.random() * 10);
         System.out.println("I'm guessing " + this.number);

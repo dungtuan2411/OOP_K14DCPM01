@@ -10,13 +10,13 @@ public class Square {
     }
 
     // method
-    void rotate() {
+    public void rotate() {
         System.out.println("Square rotating 360 ...");
         // khi xoay sẽ phát nhạc
         this.playSound();
     }
 
-    void playSound() {
+    public void playSound() {
         System.out.println("Play file " + this.soundFile + " music");
     }
 }

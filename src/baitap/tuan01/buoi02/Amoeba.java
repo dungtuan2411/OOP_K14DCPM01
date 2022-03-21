@@ -23,12 +23,12 @@ public class Amoeba {
 
     // method
     // xoay 360
-    void rotate() {
+    public void rotate() {
         System.out.println("Rotating 360 at xPoint : " + this.xPoint + " yPoint: " + this.yPoint);
         this.playSound();
     }
 
-    void playSound() {
+    public void playSound() {
         // Code xử lý cho file .hif
         System.out.println("Play file " + this.soundFile + " music");
     }
