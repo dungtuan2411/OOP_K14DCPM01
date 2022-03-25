@@ -1,46 +1,51 @@
 package kiemtragiuaky;
 
-import java.text.ParseException;
+import java.util.Date;
 import java.util.Scanner;
 
 public class GiaoDichDat extends GiaoDichNhaDat {
-    Scanner scanner = new Scanner(System.in);
     // attribute
-    private String loaiDat;
+    private char loaiDat;
 
     // get set
-    public void setLoaiDat(String loaiDat) {
+    public void setLoaiDat(char loaiDat) {
         this.loaiDat = loaiDat;
     }
 
-    public String getLoaiDat() {
+    public char getLoaiDat() {
         return loaiDat;
     }
 
     // constructor
     public GiaoDichDat() {
-        super();
-        this.loaiDat = "";
+    }
+
+    public GiaoDichDat(String maGiaoDich, Date ngayGiaoDich, double donGia, double dienTich, char loaiDat) {
+        super(maGiaoDich, ngayGiaoDich, donGia, dienTich);
+        this.loaiDat = loaiDat;
     }
 
     // method
-    public void nhap() throws ParseException {
-        super.nhap();
+    public void nhap(Scanner scanner) {
+        super.nhap(scanner);
         System.out.print("Nhap loai dat: ");
-        String loaiDat = scanner.nextLine();
+        char loaiDat = scanner.next().charAt(0);
         this.setLoaiDat(loaiDat);
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", loaiDat= " + loaiDat + "]";
+        return super.toString() + " GiaoDichDat [loaiDat=" + loaiDat + "]";
     }
 
     @Override
-    protected double thanhTien() {
-        if (loaiDat.equals("B") || loaiDat.equals("C")) {
-            return super.thanhTien();
+    public double thanhTien() {
+        double tien;
+        if (this.loaiDat == 'B' || this.loaiDat == 'C') {
+            tien = this.getDienTich() * this.getDonGia();
+        } else {
+            tien = this.getDienTich() * this.getDonGia() * 1.5;
         }
-        return super.thanhTien() * 1.5;
+        return tien;
     }
 }

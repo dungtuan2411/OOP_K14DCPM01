@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.Scanner;
 
 public abstract class GiaoDichNhaDat {
-    Scanner scanner = new Scanner(System.in);
     // attribute
     private String maGiaoDich;
     private Date ngayGiaoDich;
@@ -14,47 +13,43 @@ public abstract class GiaoDichNhaDat {
     private double dienTich;
 
     // get set
-    public void setMaGiaoDich(String maGiaoDich) {
-        this.maGiaoDich = maGiaoDich;
-    }
-
     public String getMaGiaoDich() {
         return maGiaoDich;
     }
 
-    public void setNgayGiaoDich(Date ngayGiaoDich) {
-        this.ngayGiaoDich = ngayGiaoDich;
+    public void setMaGiaoDich(String maGiaoDich) {
+        this.maGiaoDich = maGiaoDich;
     }
 
     public Date getNgayGiaoDich() {
         return ngayGiaoDich;
     }
 
-    public void setDonGia(double donGia) {
-        this.donGia = donGia;
+    public void setNgayGiaoDich(Date ngayGiaoDich) {
+        this.ngayGiaoDich = ngayGiaoDich;
     }
 
     public double getDonGia() {
         return donGia;
     }
 
-    public void setDienTich(double dienTich) {
-        this.dienTich = dienTich;
+    public void setDonGia(double donGia) {
+        this.donGia = donGia;
     }
 
     public double getDienTich() {
         return dienTich;
     }
 
-    // constructor
-    protected GiaoDichNhaDat() {
-        this.setMaGiaoDich("");
-        this.setNgayGiaoDich(new Date());
-        this.setDonGia(0);
-        this.setDienTich(0);
+    public void setDienTich(double dienTich) {
+        this.dienTich = dienTich;
     }
 
-    protected GiaoDichNhaDat(String maGiaoDich, Date ngayGiaoDich, double donGia, double dienTich) {
+    // constructor
+    public GiaoDichNhaDat() {
+    }
+
+    public GiaoDichNhaDat(String maGiaoDich, Date ngayGiaoDich, double donGia, double dienTich) {
         this.setMaGiaoDich(maGiaoDich);
         this.setNgayGiaoDich(ngayGiaoDich);
         this.setDonGia(donGia);
@@ -62,7 +57,7 @@ public abstract class GiaoDichNhaDat {
     }
 
     // method
-    protected void nhap() throws ParseException {
+    protected void nhap(Scanner scanner) {
         System.out.print("Nhap ma giao dich: ");
         String maGiaoDich = scanner.nextLine();
         this.setMaGiaoDich(maGiaoDich);
@@ -70,7 +65,11 @@ public abstract class GiaoDichNhaDat {
         System.out.print("Nhap ngay giao dich: ");
         String ngayGiaoDich = scanner.nextLine();
         SimpleDateFormat ngayVietNam = new SimpleDateFormat("dd/MM/yyyy");
-        this.setNgayGiaoDich(ngayVietNam.parse(ngayGiaoDich));
+        try {
+            this.setNgayGiaoDich(ngayVietNam.parse(ngayGiaoDich));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
         System.out.print("Nhap don gia: ");
         double donGia = scanner.nextDouble();
@@ -79,16 +78,17 @@ public abstract class GiaoDichNhaDat {
         System.out.print("Nhap dien tich: ");
         double dienTich = scanner.nextDouble();
         this.setDienTich(dienTich);
+        scanner.nextLine();
     };
+
+    public abstract double thanhTien();
 
     @Override
     public String toString() {
-        SimpleDateFormat ngayVietNam = new SimpleDateFormat("dd/MM/yyyy");
-        
-        return "Giao dich [maGiaoDic= " + maGiaoDich + ", ngaygiaodich: " + ngayVietNam.format(ngayGiaoDich) + ", donGia: " + donGia + ", dienTich: " + dienTich;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+        return "GiaoDichNhaDat [dienTich=" + dienTich + ", donGia=" + donGia + ", maGiaoDich=" + maGiaoDich
+                + ", ngayGiaoDich=" + simpleDateFormat.format(ngayGiaoDich);
     }
 
-    protected double thanhTien() {
-        return this.dienTich * this.donGia;
-    }
 }
