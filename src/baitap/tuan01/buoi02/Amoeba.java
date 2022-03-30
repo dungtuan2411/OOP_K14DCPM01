@@ -9,8 +9,25 @@ public class Amoeba {
      */
     private String soundFile;
     private double xPoint, yPoint; // tọa độ điểm
-    // constructor
 
+    // getter setter
+    public void setxPoint(double xPoint) {
+        this.xPoint = xPoint;
+    }
+
+    public double getxPoint() {
+        return xPoint;
+    }
+
+    public void setyPoint(double yPoint) {
+        this.yPoint = yPoint;
+    }
+
+    public double getyPoint() {
+        return yPoint;
+    }
+
+    // constructor
     public Amoeba(String soundFile) {
         this.soundFile = soundFile;
     }
