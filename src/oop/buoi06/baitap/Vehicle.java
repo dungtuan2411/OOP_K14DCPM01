@@ -1,4 +1,4 @@
-package oop.buoi06;
+package oop.buoi06.baitap;
 
 public class Vehicle {
     private String tenChuXe;

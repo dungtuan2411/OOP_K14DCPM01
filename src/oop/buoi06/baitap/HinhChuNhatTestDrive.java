@@ -1,4 +1,4 @@
-package oop.buoi06;
+package oop.buoi06.baitap;
 
 public class HinhChuNhatTestDrive {
     public static void main(String[] args) {

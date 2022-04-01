@@ -1,4 +1,4 @@
-package oop.buoi06;
+package oop.buoi06.baitap;
 
 import java.util.Scanner;
 
