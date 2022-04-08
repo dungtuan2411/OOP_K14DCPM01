@@ -36,7 +36,7 @@ public class ChuyenXeNoiThanh extends ChuyenXe {
 
     // method
     @Override
-    void nhap(Scanner scanner) {
+    public void nhap(Scanner scanner) {
         super.nhap(scanner);
         System.out.print("Nhap so tuyen: ");
         this.soTuyen = scanner.nextInt();

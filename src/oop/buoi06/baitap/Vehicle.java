@@ -12,7 +12,6 @@ public class Vehicle {
 
     Vehicle(String tenChuXe, String loaiXe, int dungTich, double triGia) {
         this.setTenChuXe(tenChuXe);
-        ;
         this.setLoaiXe(loaiXe);
         this.setDungTich(dungTich);
         this.setTriGia(triGia);

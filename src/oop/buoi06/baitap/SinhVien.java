@@ -8,10 +8,6 @@ public class SinhVien {
 
     // constructor
     SinhVien() {
-        this.maSV = 0;
-        this.hoTen = "";
-        this.diemLT = 0;
-        this.diemTH = 0;
     }
 
     SinhVien(int maSV, String hoTen, float diemLT, float diemTH) {

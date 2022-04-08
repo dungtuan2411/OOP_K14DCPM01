@@ -22,7 +22,7 @@ public class PracticeThis {
     }
 
     public PracticeThis(PracticeThis other) {
-        // Consturtor là có 1 tham số chính là tham chiếu đến đối tượng này
+        // Constructor có 1 tham số chính là tham chiếu đến đối tượng này
         // Vì vậy nó sẽ có thuộc tính value thuộc kiểu int
         // Gọi đến constructor 1 tham số int và set argument là value của tham chiếu
         this(other.value);

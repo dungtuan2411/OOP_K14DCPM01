@@ -64,9 +64,8 @@ public class SinhVien {
 
     @Override
     public String toString() {
-        return "SinhVien [diaChi=" + diaChi + ", hoTen=" + hoTen + ", maSinhVien=" + maSinhVien + ", soDienThoai="
+        return "SinhVien [diaChi=" + diaChi + ", hoTen=" + hoTen +
+                ", maSinhVien=" + maSinhVien + ", soDienThoai="
                 + soDienThoai + "]";
     }
-
-    
 }

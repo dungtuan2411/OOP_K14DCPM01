@@ -72,12 +72,20 @@ public class CDList {
     }
 
     // tính tổng giá thành
-    double tinhTongGiaThanh() {
+    private double tinhTongGiaThanhImplementation() {
+        double tong = 0;
+        int listCDLength = listCD.length;
+
+        for (int i = 0; i < listCDLength; i++) {
+            tong += listCD[i].getGiaThanh();
+        }
+
+        return tong;
+    }
+
+    public double tinhTongGiaThanh() {
         if (!containNull()) {
-            int tong = 0;
-            for (int i = 0; i < listCD.length; i++) {
-                tong += listCD[i].getGiaThanh();
-            }
+            double tong = tinhTongGiaThanhImplementation();
             return tong;
         } else {
             System.out.println("Danh sach rong! Vui long nhap!");
@@ -129,7 +137,7 @@ public class CDList {
     }
 
     // sắp xếp danh sách tăng dần theo tựa CD
-    void sapXepTheoTua() {
+    public void sapXepTheoTua() {
         if (!containNull()) {
             Arrays.sort(listCD);
         } else {
