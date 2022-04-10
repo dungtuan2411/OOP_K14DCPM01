@@ -7,11 +7,5 @@ public class LionTestDrive {
         lion.sleep();
         lion.makeNoise();
         lion.roam();
-
-        Wolf w = new Wolf();
-        w.eat();
-        w.sleep();
-        w.makeNoise();
-        w.roam();
     }
 }
