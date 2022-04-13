@@ -12,6 +12,10 @@ public class AnimalTestDrive {
         Cow cow = new Cow();
         cow.eat();
 
+        // remote là kiểu interface chiếu đến object của class implements nó
+        Pet pet = new Cat();
+        pet.beFriendly();
+
         // không code với lớp concrete - implementation
     }
 }
