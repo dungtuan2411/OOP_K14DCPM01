@@ -28,7 +28,7 @@ public abstract class Animal {
     }
 
     // method - behavior - interface - encapsulation
-    protected abstract void makeNoise(); // hợp đồng mà tất cả lớp con phải thực thi
+    public abstract void makeNoise(); // hợp đồng mà tất cả lớp con phải thực thi
 
     protected abstract void eat(); // hợp đồng mà tất cả lớp con phải thực thi
 

@@ -13,13 +13,13 @@ public class Lion extends Feline {
 
     // method
     @Override
-    protected void makeNoise() {
+    public void makeNoise() {
         // code mới dành cho sư tử
         System.out.println("making Lion noise");
     }
 
     @Override
-    protected void eat() {
+    public void eat() {
         System.out.println("Lion eating meat");
     }
 }

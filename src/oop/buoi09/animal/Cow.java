@@ -3,7 +3,7 @@ package oop.buoi09.animal;
 public class Cow extends Animal {
 
     @Override
-    protected void makeNoise() {
+    public void makeNoise() {
         System.out.println("Cow sound ...");
     }
 
